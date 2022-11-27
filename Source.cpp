@@ -1,21 +1,40 @@
-#include <iostream>
-#include <string>
+# include <iostream>
 using namespace std;
 
 int main() {
 
-	cout << "PLEASE INSERT TWO NUMBER FOR THEIR ADDITION \n";
-	int x,y;
-	cout << "ENTER YOUT FIRST NUMBER \n";
-	cin >> x;
-	cout << "ENTER YOUR SECOND NUMBER \n\n";
-	cin >> y;
-	cout << "YOUR NUMBER AFTER ADDITION IS " << x + y << endl;
+  char op;
+  float num1, num2;
 
-	string ashish = "ashisha";
-	cout << ashish;
+  cout << "Enter operator: +, -, *, /: ";
+  cin >> op;
 
-	return 0;
+  cout << "Enter two operands: ";
+  cin >> num1 >> num2;
 
+  switch(op) {
 
+    case '+':
+      cout << num1 << " + " << num2 << " = " << num1 + num2;
+      break;
+
+    case '-':
+      cout << num1 << " - " << num2 << " = " << num1 - num2;
+      break;
+
+    case '*':
+      cout << num1 << " * " << num2 << " = " << num1 * num2;
+      break;
+
+    case '/':
+      cout << num1 << " / " << num2 << " = " << num1 / num2;
+      break;
+
+    default:
+      // If the operator is other than +, -, * or /, error message is shown
+      cout << "Error! operator is not correct";
+      break;
+  }
+
+  return 0;
 }
